@@ -1,0 +1,68 @@
+{{#> component-container title="Tabs"}}
+
+<div class="c-tabs js-tabs">
+    <div class="c-tabs__control">
+        <span class="c-tabs__tab js-tab-link is-active" data-index="orders">الطلبات تتطلب مراجعة</span>
+        <span class="c-tabs__tab js-tab-link" data-index="products">المنتجات على وشك النفاذٍ</span>
+        <span class="c-tabs__tab js-tab-link" data-index="clients">زبائن جدد</span>
+    </div>
+
+    <div class="c-tabs__content">
+        <div class="c-tabs__tabarea js-tab-area is-active" data-index="orders">Tab1</div>
+        <div class="c-tabs__tabarea js-tab-area" data-index="products">Tab2</div>
+        <div class="c-tabs__tabarea js-tab-area" data-index="clients">Tab3</div>
+    </div>
+
+
+</div>
+
+<script>
+    // استخدام IIFE لتغليف الكود ومنع تلوث النطاق العام (Global Scope)
+    (function () {
+        // جلب جميع عناصر مكونات التبويبات الموجودة في الصفحة
+        const tabs = document.querySelectorAll('.js-tabs');
+
+        // التكرار على كل مكون تبويب بشكل مستقل
+        Array.from(tabs, (tab) => {
+            const tabsLinks = tab.querySelectorAll('.js-tab-link'); // عناوين/روابط التبويبات
+            let currentActiveTab = tab.querySelector('.js-tab-link.is-active'); // التبويب النشط حالياً
+
+            // دالة تبديل حالة التبويب ومحتواه المرتبط به (تفعيل / إلغاء تفعيل)
+            const toggleTab = (toggleTabLink = currentActiveTab) => {
+                currentActiveTab = toggleTabLink;
+                toggleTabLink.classList.toggle('is-active'); // إعطاء/إزالة كلاس النشاط للرابط
+
+                // جلب معرف التبويب من data-index وتحديد منطقة المحتوى المقابلة له
+                const toggleTabData = toggleTabLink.dataset.index;
+                const toggleTabArea = tab.querySelector(`.js-tab-area[data-index="${toggleTabData}"]`);
+                toggleTabArea.classList.toggle('is-active'); // إعطاء/إزالة كلاس النشاط للمحتوى
+            };
+
+            // إذا لم يكن هناك تبويب نشط عند التحميل، يتم تفعيل التبويب الأول افتراضياً
+            if (!currentActiveTab) {
+                toggleTab(tabsLinks[0]);
+            }
+
+            // إضافة مستمع حدث النقر (Click) لكل رابط تبويب
+            tabsLinks.forEach(tabsLink => {
+                tabsLink.addEventListener('click', function (event) {
+                    // إذا كان التبويب المنقور هو النشط حالياً، تجاهل الحدث
+                    if (currentActiveTab === this) {
+                        return;
+                    }
+
+                    // إغلاق/إلغاء تفعيل التبويب النشط حالياً
+                    if (currentActiveTab) {
+                        toggleTab();
+                    }
+
+                    // تفعيل التبويب الجديد الذي تم النقر عليه
+                    toggleTab(this);
+                })
+            })
+        });
+    })();
+</script>
+
+
+{{/component-container}}

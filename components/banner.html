@@ -1,0 +1,34 @@
+{{#> component-container title="Banner"}}
+<div class="c-banner">
+    <h3 class="c-banner__title">معلومات الشحن غير متوفرة حاليا</h3>
+
+    <p class="c-banner__desc">
+        يرجى تفعيل معلومات الشحن من خلال الربط مع أحد شركاء الشحن المعتمدين يرجى تفعيل معلومات الشحن
+    </p>
+    <a href="#" class="c-btn c-btn--ghost c-banner__action">اكتشف المزيد</a>
+    <i class="fa-solid fa-flag c-banner__icon"></i>
+    <i class="fa-solid fa-circle-xmark c-banner__close"></i>
+</div>
+
+<script>
+    (function () {
+
+        const closeBanners = document.querySelectorAll('.c-banner__close');
+        closeBanners.forEach(closeBanner => {
+            closeBanner.addEventListener('click', event => {
+                const banner = event.target.parentNode;
+                banner.classList.add('collapse');
+
+                banner.addEventListener('transitionend', function (event) {
+                    if (event.target === this) {
+                        this.remove();
+                    }
+
+                })
+            })
+        })
+
+    })();
+</script>
+
+{{/component-container}}

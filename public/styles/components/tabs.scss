@@ -1,0 +1,33 @@
+@use "../utilites/mixin-card.scss" as mixin-card;
+@use "../utilites/spacing.scss" as spaces;
+@use "../config/colors.scss" as colors;
+
+.c-tabs {
+    @include mixin-card.e-card;
+    width: 100%;
+}
+
+.c-tabs__control {
+    display: flex;
+}
+
+.c-tabs__tab {
+    text-align: center;
+    padding: spaces.spacing() spaces.spacing("small");
+    flex-grow: 1;
+
+    border-bottom: 3px solid transparent;
+
+}
+
+.c-tabs__tab.is-active {
+    border-color: colors.$color-primary;
+}
+
+.c-tabs__tabarea {
+    display: none;
+}
+
+.c-tabs__tabarea.is-active {
+    display: block;
+}

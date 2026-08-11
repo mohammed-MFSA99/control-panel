@@ -1,0 +1,95 @@
+@use "sass:color";
+@use "../config/layout.scss" as layout;
+@use "../utilites/spacing.scss" as spaces;
+@use "../config/colors.scss" as colors;
+@use "../base/font.scss";
+
+$sidebar-control-width: 35px;
+$sidebar-icon-size: 20px;
+$sidebar-logo-height: $sidebar-control-width;
+
+
+
+.c-sidebar {
+    width: layout.$layout-sidebar;
+    height: 100vh;
+    position: fixed;
+    right: 0;
+    top: 0;
+    display: flex;
+    background-color: colors.$color-background;
+    padding: spaces.spacing('wide') spaces.spacing('small');
+
+}
+
+.c-sidebar__control {
+    display: flex;
+    flex-direction: column;
+    width: $sidebar-control-width;
+    align-items: center;
+}
+
+.c-sidebar__icon {
+    width: $sidebar-icon-size;
+    height: $sidebar-icon-size;
+    font-size: 16px;
+    color: colors.$color-dark;
+    margin: spaces.spacing('extra-small') 0;
+    display: block;
+
+}
+
+.c-sidebar__icon--large {
+    width: $sidebar-control-width;
+    height: $sidebar-control-width;
+}
+
+.c-sidebar__logo {
+    margin: 0 0 spaces.spacing('normal') 0;
+
+    svg {
+        stroke: colors.$color-brand;
+    }
+}
+
+.c-sidebar__icon--bottom {
+    margin-top: auto;
+
+    img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+    }
+}
+
+.c-sidebar__menu {
+    margin-right: spaces.spacing('small');
+}
+
+.c-sidebar__title {
+    font-size: 24px;
+    color: colors.$color-dark;
+    line-height: $sidebar-logo-height;
+    margin: 0 0 spaces.spacing('normal');
+
+    a {
+        color: inherit;
+    }
+
+}
+
+.c-sidebar__link {
+    display: flex;
+    color: colors.$color-dark;
+    align-items: center;
+    padding: spaces.spacing('extra-small') 0;
+    line-height: $sidebar-icon-size;
+
+    & .fa-solid {
+        margin-left: spaces.spacing('extra-small');
+
+    }
+
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}

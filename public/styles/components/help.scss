@@ -1,0 +1,22 @@
+@use "sass:color";
+@use "../utilites/spacing.scss" as spaces;
+@use "../config/colors.scss" as colors;
+
+
+.c-help {
+    display: flex;
+    align-items: center;
+    border-radius: spaces.spacing('small') * 2;
+    background-color: white;
+    border: 1px solid rgb(color.adjust(colors.$color-primary, $lightness: -30%), 0.15);
+    padding: spaces.spacing();
+    margin: spaces.spacing('wide') auto;
+    width: fit-content;
+}
+
+.c-help__icon {
+    font-size: 20px;
+    color: colors.$color-primary;
+    margin-left: spaces.spacing("extra-small");
+
+}

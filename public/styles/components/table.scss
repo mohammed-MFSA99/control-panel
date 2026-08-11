@@ -1,0 +1,90 @@
+@use "sass:color";
+@use "sass:math";
+@use "../utilites/mixin-card.scss" as mixin-card;
+@use "../utilites/spacing.scss" as spaces;
+@use "../config/colors.scss" as colors;
+@use "../config/layout.scss" as layout;
+@use "../config/variables.scss" as vars;
+
+
+
+
+$product-media-size: 40px;
+
+.c-table {
+    @include mixin-card.e-card;
+    padding: 0 0 spaces.spacing('normal') 0;
+    width: 100%;
+}
+
+.c-table__header {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: spaces.spacing('small');
+    padding: 0 spaces.spacing('normal');
+}
+
+.c-table__navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: spaces.spacing();
+}
+
+.c-table__actions {
+    margin-left: auto;
+}
+
+.c-table__footer {
+    display: flex;
+    padding-top: spaces.spacing('normal');
+    padding-left: spaces.spacing('normal');
+    flex-flow: row-reverse;
+}
+
+.c-table__navigation__caption {
+    margin-left: spaces.spacing('small');
+    font-size: 13px;
+}
+
+
+.c-table__title {
+    font-size: 20px;
+    margin-bottom: 0;
+    margin-left: spaces.spacing('small');
+    padding-top: spaces.spacing('normal');
+}
+
+.c-table__data {
+    width: 100%;
+    font-size: 13px;
+    border-collapse: collapse;
+
+    th {
+        text-align: right;
+    }
+
+    td,
+    th {
+        padding: spaces.spacing('extra-small') 0;
+        font-size: 13px;
+        border-bottom: 1px solid rgba(color.adjust(white, $lightness: -40%), 0.15);
+
+        img {
+            width: $product-media-size;
+            height: $product-media-size;
+            vertical-align: middle;
+        }
+    }
+}
+
+.c-table--select-all {
+
+    th,
+    td {
+        &:first-child {
+            padding-right: spaces.spacing('normal');
+            width: 75px;
+        }
+    }
+}

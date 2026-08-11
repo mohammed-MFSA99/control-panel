@@ -12,8 +12,10 @@
     "vite": "^8.1.1"
   },
   "dependencies": {
+    "chart.js": "^4.5.1",
     "normalize.css": "^8.0.1",
     "postcss-preset-env": "^11.3.2",
-    "sass": "^1.102.0"
+    "sass": "^1.102.0",
+    "vite-plugin-handlebars": "^2.0.3"
   }
 }

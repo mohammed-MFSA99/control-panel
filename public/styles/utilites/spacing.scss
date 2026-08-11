@@ -15,7 +15,7 @@ $spacing-data: (
 );
 
 @function spacing($variant: base) {
-    $fetched-value: map.get(spacing-data, $variant);
+    $fetched-value: map.get($spacing-data, $variant);
 
     @if meta.type-of($fetched-value )==number {
         @return $fetched-value;

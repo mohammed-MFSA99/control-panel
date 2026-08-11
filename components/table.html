@@ -1,0 +1,61 @@
+{{#> component-container title="Table"}}
+
+<div class="c-table">
+
+    <header class="c-table__header">
+        <h3 class="c-table__title">
+            المنتجات
+        </h3>
+        <div class="c-table__actions">
+            <button class="c-btn c-btn--destructive c-btn--slim">حذف</button>
+        </div>
+        <div class="c-table__navigation">
+            <span class="c-table__navigation__caption">6 من اصل 24</span>
+            <div class="c-table__navigation__arrows">
+                <button class="c-btn c-btn--icon "><i class="fa-solid fa-arrow-right"></i></button>
+                <button class="c-btn c-btn--icon"><i class="fa-solid fa-arrow-left"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <table class="c-table__data c-table--select-all">
+        <thead>
+            <tr>
+                <th>
+                    <input type="checkbox" id="select-all">
+
+                </th>
+                <th><label for="select-all">تحديد الكل</label></th>
+                <th>المنتج</th>
+                <th>السعر الرئيسي</th>
+                <th>السعر المحلي</th>
+                <th>الكمية</th>
+                <th>المبيعات</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="checkbox" id="itme-1"></td>
+                <td><img src="/public/images/black-shirt.jpg"></td>
+                <td>قميص اسود</td>
+                <td>20$</td>
+                <td>75ر.س</td>
+                <td>23</td>
+                <td>44</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <footer class="c-table__footer">
+        <div class="c-table__navigation">
+            <span class="c-table__navigation__caption">6 من اصل 24</span>
+            <div class="c-table__navigation__arrows">
+                <button class="c-btn c-btn--icon"><i class="fa-solid fa-arrow-right"></i></button>
+                <button class="c-btn c-btn--icon"><i class="fa-solid fa-arrow-left"></i></button>
+            </div>
+        </div>
+    </footer>
+</div>
+
+
+{{/component-container}}

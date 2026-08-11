@@ -1,0 +1,82 @@
+{{#> component-container title="Chart"}}
+
+<div class="c-chart">
+    <header class="c-chart__header">
+        <div class="c-chart__header__title">
+            <h3 class="c-chart__title">المبيعات</h3>
+            <span class="c-chart__data">
+                1 اكتوبر 2025
+            </span>
+        </div>
+        <div class="c-summary c-summary--small c-summary--boxless c-summary--spaceless">
+            <div class="c-summary__data">
+                <span class="c-summary__key">التغير الشهري</span>
+                <span class="c-summary__value c-summary__value-positive">16.6%</span>
+
+            </div>
+            <div class="c-summary__data">
+
+                <span class="c-summary__key">المجموع</span>
+                <span class="c-summary__value">$9355</span>
+            </div>
+            <div class="c-summary__data">
+
+                <span class="c-summary__key">اخر ثلاثين يوم</span>
+                <span class="c-summary__value">$1325</span>
+            </div>
+        </div>
+        <div class="c-table__navigation">
+            <div class="c-table__navigation__arrows">
+                <button class="c-btn c-btn--icon "><i class="fa-solid fa-arrow-right"></i></button>
+                <button class="c-btn c-btn--icon"><i class="fa-solid fa-arrow-left"></i></button>
+            </div>
+        </div>
+    </header>
+    <canvas class="c-chart__data" id="example-chart" width="600" height="300"></canvas>
+</div>
+
+<script type="module">
+    import Chart from 'chart.js/auto';
+    const ctx = document.getElementById('example-chart');
+
+    const chart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['يناير', 'فبراير', 'مارس', 'ابريل', 'ماي', 'يونيو', 'يوليو', 'اغسطس', 'سبتمبر', 'اكتوبر', 'نوفمبر', 'ديسمبر'],
+            datasets: [{
+                label: 'مبيعات الشهر',
+                data: [432, 533, 1200, 644, 362, 1240, 1630, 235, 422, 543, 123, 333],
+                borderColor: '#2541b2',
+                backgroundColor: 'transparent',
+                lineTension: 0.2,
+            }]
+        },
+        options: {
+            plugins: {
+                legend: {
+                    display: false,
+                }
+            },
+            scales: {
+                y: {
+                    display: false
+                },
+                x: {
+                    position: 'top'
+                }
+            }
+        }
+    });
+
+    const navigation = document.querySelector('.c-table__navigation');
+    const randomArray = (myLenght, max) => Array.from({ length: myLenght }, () => Math.round(Math.random() * max));
+
+    navigation.addEventListener('click', () => {
+
+        chart.data.datasets[0].data = randomArray(12, 1200);
+        chart.update();
+
+    })
+</script>
+
+{{/component-container}}

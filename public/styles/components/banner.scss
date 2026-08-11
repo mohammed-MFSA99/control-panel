@@ -1,0 +1,75 @@
+@use "../utilites/mixin-card.scss" as mixin-card;
+@use "../config/colors.scss" as colors;
+@use "../utilites/spacing.scss" as spaces;
+
+$color-banner: #47c1bf;
+$color-banner-light: #b7ecec;
+$color-banner-lighter: #e0f5f5;
+$color-banner-dark: #00848e;
+$icon-size: 32px;
+
+
+.c-banner {
+    @include mixin-card.e-card;
+    background-color: $color-banner-lighter;
+    border-top: 3px solid $color-banner-dark;
+    padding: spaces.spacing('small') spaces.spacing('extra-wide');
+    position: relative;
+
+}
+
+.c-banner__title {
+    color: colors.$color-title-subdued;
+    font-weight: normal;
+}
+
+.c-banner__desc {
+    font-size: 14px;
+}
+
+.c-banner__action {
+    color: colors.$color-title-subdued;
+    border-color: colors.$color-title-subdued;
+}
+
+.c-banner__close,
+.c-banner__icon {
+    position: absolute;
+    top: spaces.spacing('small');
+
+}
+
+.c-banner__close {
+    left: spaces.spacing('normal');
+    cursor: pointer;
+}
+
+.c-banner__icon {
+    right: spaces.spacing('normal');
+    color: $color-banner-dark;
+    background: $color-banner-light;
+    border-radius: 50%;
+    width: $icon-size;
+    height: $icon-size;
+    line-height: $icon-size;
+    text-align: center;
+
+
+}
+
+.c-banner>* {
+    transform: opacity 200ms ease;
+}
+
+.c-banner {
+    transition: transform 400ms ease-out;
+}
+
+.c-banner.collapse>* {
+    opacity: 0;
+}
+
+.c-banner.collapse {
+    transform: scaleY(0);
+    transform-origin: 50% 0;
+}

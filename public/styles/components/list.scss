@@ -1,0 +1,35 @@
+@use "../utilites/spacing.scss" as spaces;
+
+.c-list {
+
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background: #fff;
+    padding: spaces.spacing("extra-small");
+    box-shadow: 0 0 0 1px rgb(black, 0.05);
+
+}
+
+.c-list__media {
+    height: 60px;
+    margin-left: spaces.spacing("small");
+    width: auto;
+}
+
+.c-list__data {
+    flex-grow: 1;
+    margin-left: spaces.spacing("small");
+}
+
+.c-list__actions {
+    margin-right: 0;
+    margin-left: spaces.spacing("small");
+    text-align: left;
+    opacity: 0;
+    transition: all 200ms ease;
+}
+
+.c-list:hover .c-list__actions {
+    opacity: 1;
+}
