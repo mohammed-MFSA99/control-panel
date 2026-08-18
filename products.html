@@ -1,0 +1,44 @@
+{{#> layout title="المنتجات" }}
+
+<div class="single-page">
+    <header class="page-header">
+        <h1 class="page-title">المنتجات</h1>
+        <a href="/add-product.html" class="c-btn" type="submit" name="draft">اضافة منتج </a>
+    </header>
+
+    <div class="c-table">
+        {{#> table-header title="المنتجات" caption="6 من اصل 24"}}
+        <button class="c-btn c-btn--destructive c-btn--slim">حذف</button>
+        {{/table-header}}
+
+        <table class="c-table__data c-table--select-all">
+            <thead>
+                <tr>
+                    {{> select-all}}
+                    <th>المنتج</th>
+                    <th>السعر الرئيسي</th>
+                    <th>السعر المحلي</th>
+                    <th>الكمية</th>
+                    <th>المبيعات</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="checkbox" id="itme-1"></td>
+                    <td><img src="/public/images/black-shirt.jpg"></td>
+                    <td>قميص اسود</td>
+                    <td>20$</td>
+                    <td>75ر.س</td>
+                    <td>23</td>
+                    <td>44</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <footer class="c-table__footer">
+            {{> table-navigation caption="6 من اصل 24"}}
+        </footer>
+    </div>
+</div>
+
+{{/layout}}

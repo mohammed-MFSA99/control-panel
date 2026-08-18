@@ -17,7 +17,7 @@ $sidebar-logo-height: $sidebar-control-width;
     right: 0;
     top: 0;
     display: flex;
-    background-color: colors.$color-background;
+    background-color: rgba(colors.$color-blue-dark, 0.1);
     padding: spaces.spacing('wide') spaces.spacing('small');
 
 }

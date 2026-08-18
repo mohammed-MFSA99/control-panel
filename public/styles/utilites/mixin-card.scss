@@ -9,5 +9,5 @@
     box-shadow: 0 1px 3px 0 rgb(color.adjust(colors.$color-primary, $lightness: -30%), 0.15),
         0 0 0 1px rgb(color.adjust(colors.$color-primary, $lightness: -30%), 0.05);
 
-    margin: spaces.spacing('normal');
+    margin-bottom: spaces.spacing('normal');
 }

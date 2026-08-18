@@ -1,0 +1,17 @@
+@use "../utilites/spacing.scss" as spaces;
+
+
+.page-header {
+    display: flex;
+    align-items: baseline;
+    margin: spaces.spacing("wide") 0;
+
+    & .c-btn {
+        margin: 0 spaces.spacing();
+
+    }
+
+    & .c-btn:first-child {
+        margin-right: spaces.spacing("wide");
+    }
+}

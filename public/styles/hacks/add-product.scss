@@ -1,0 +1,6 @@
+@use "../utilites/spacing.scss" as spaces;
+
+.c-upload+.c-form__controls {
+    width: 600px;
+    margin-right: spaces.spacing('wide');
+}

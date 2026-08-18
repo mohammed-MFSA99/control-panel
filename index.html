@@ -1,18 +1,169 @@
-<!doctype html>
-<html lang="en">
+{{#> layout title="الصفحة الريئسية" pageScript="/src/scripts/home.js"}}
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>control panel</title>
-</head>
+<div class="main-page">
+  <header class="home-intro">
+    <h2 class="welcome-tag">
+      مرحبا احمد اتنمى انك تقضي يوما جميلا <br>
+      شاهد اخر ما حدث في متجرك
+    </h2>
+    <div class="c-summary">
+      <div class="c-summary__data">
+        <span class="c-summary__value">35</span>
+        <span class="c-summary__key">طلب</span>
+      </div>
+      <div class="c-summary__data">
+        <span class="c-summary__value">1350</span>
+        <span class="c-summary__key">زائر</span>
+      </div>
+      <div class="c-summary__data">
+        <span class="c-summary__value">4500$</span>
+        <span class="c-summary__key">مبيعات</span>
+      </div>
+    </div>
 
-<body>
-  <h1>مرحبا عالم</h1>
+  </header>
+
+  <ul class="c-actions">
+    <li class="c-action">
+      <span class="c-action__title">طلبات تحتاج معالجة</span>
+      <a href="#" class="c-btn c-action__link">مشاهدة الطلبات</a>
+    </li>
+    <li class="c-action">
+      <span class="c-action__title"> 5 رسائل تجتاج الاجابة</span>
+      <a href="#" class="c-btn c-action__link">مشاهدة الرسائل</a>
+    </li>
+    <li class="c-action">
+      <span class="c-action__title">طلبات تحتاج معالجة</span>
+      <a href="#" class="c-btn c-action__link">مشاهدة المنتجات</a>
+    </li>
+  </ul>
+
+  <div class="c-card">
+    <h3 class="c-card__title">معلومات الشحن غير متوفرة حاليا</h3>
+    <a href="#" class="c-btn c-btn--primary c-card__action">ربط معلومات الشحن</a>
+    <p class="c-card__desc">
+      يرجى تفعيل معلومات الشحن من خلال الربط مع أحد شركاء الشحن المعتمدين يرجى تفعيل معلومات الشحن
+
+    </p>
+
+  </div>
+
+  <div class="c-banner">
+    <h3 class="c-banner__title">معلومات الشحن غير متوفرة حاليا</h3>
+
+    <p class="c-banner__desc">
+      يرجى تفعيل معلومات الشحن من خلال الربط مع أحد شركاء الشحن المعتمدين يرجى تفعيل معلومات الشحن
+    </p>
+    <a href="#" class="c-btn c-btn--ghost c-banner__action">اكتشف المزيد</a>
+    <i class="fa-solid fa-flag c-banner__icon"></i>
+    <i class="fa-solid fa-circle-xmark c-banner__close"></i>
+  </div>
 
 
+  <div class="c-chart">
+    <header class="c-chart__header">
+      <div class="c-chart__header__title">
+        <h3 class="c-chart__title">المبيعات</h3>
+        <span class="c-chart__data">
+          1 اكتوبر 2025
+        </span>
+      </div>
+      <div class="c-summary c-summary--small c-summary--boxless c-summary--spaceless">
+        <div class="c-summary__data">
+          <span class="c-summary__key">التغير الشهري</span>
+          <span class="c-summary__value c-summary__value-positive">16.6%</span>
 
-  <script type="module" src="/src/main.js"></script>
-</body>
+        </div>
+        <div class="c-summary__data">
 
-</html>
+          <span class="c-summary__key">المجموع</span>
+          <span class="c-summary__value">$9355</span>
+        </div>
+        <div class="c-summary__data">
+
+          <span class="c-summary__key">اخر ثلاثين يوم</span>
+          <span class="c-summary__value">$1325</span>
+        </div>
+      </div>
+      <div class="c-table__navigation">
+        {{> table-arrows}}
+
+      </div>
+    </header>
+    <canvas class="c-chart__data" id="example-chart" width="600" height="300"></canvas>
+  </div>
+
+  <div class="c-tabs js-tabs">
+    <div class="c-tabs__control">
+      <span class="c-tabs__tab js-tab-link is-active" data-index="orders">الطلبات تتطلب مراجعة</span>
+      <span class="c-tabs__tab js-tab-link" data-index="products">المنتجات على وشك النفاذٍ</span>
+      <span class="c-tabs__tab js-tab-link" data-index="clients">زبائن جدد</span>
+    </div>
+
+    <div class="c-tabs__content">
+      <div class="c-tabs__tabarea js-tab-area is-active" data-index="orders">
+        <div class="c-list">
+          <img src="/images/black-shirt.jpg" class="c-list__media">
+          <span class="c-list__data"> قيص اسود M</span>
+          <span class="c-list__data">علي صلاح</span>
+          <span class="c-list__data">اليمن-حضرموت</span>
+          <span class="c-list__data">20.00$</span>
+
+          <div class="c-list__actions">
+            <a href="#" class="c-btn c-btn--primary c-btn--small">تم الحشن </a>
+            <a href="#" class="c-btn c-btn--small">تواصل</a>
+            <a href="#" class="c-btn c-btn--destructive c-btn--small">حذف الطلب</a>
+          </div>
+        </div>
+        <div class="c-list">
+          <img src="/images/black-shirt.jpg" class="c-list__media">
+          <span class="c-list__data"> 2قيص اسود M</span>
+          <span class="c-list__data">صالح المري</span>
+          <span class="c-list__data">اليمن-حضرموت</span>
+          <span class="c-list__data">13.00$</span>
+
+          <div class="c-list__actions">
+            <a href="#" class="c-btn c-btn--primary c-btn--small">تم الحشن </a>
+            <a href="#" class="c-btn c-btn--small">تواصل</a>
+            <a href="#" class="c-btn c-btn--destructive c-btn--small">حذف الطلب</a>
+          </div>
+        </div>
+      </div>
+      <div class="c-tabs__tabarea js-tab-area" data-index="products">
+        <div class="c-list">
+          <img src="/images/black-shirt.jpg" class="c-list__media">
+          <span class="c-list__data"> قيص ابيض M</span>
+          <span class="c-list__data"> موسى سالم</span>
+          <span class="c-list__data">اليمن-عدن</span>
+          <span class="c-list__data">15.00$</span>
+
+          <div class="c-list__actions">
+            <a href="#" class="c-btn c-btn--primary c-btn--small">تم الحشن </a>
+            <a href="#" class="c-btn c-btn--small">تواصل</a>
+            <a href="#" class="c-btn c-btn--destructive c-btn--small">حذف الطلب</a>
+          </div>
+        </div>
+      </div>
+      <div class="c-tabs__tabarea js-tab-area" data-index="clients">
+        <div class="c-list">
+          <img src="/images/black-shirt.jpg" class="c-list__media">
+          <span class="c-list__data"> قيص اخضر M</span>
+          <span class="c-list__data">عماد القاضي</span>
+          <span class="c-list__data">اليمن-شبوة</span>
+          <span class="c-list__data">29.00$</span>
+
+          <div class="c-list__actions">
+            <a href="#" class="c-btn c-btn--primary c-btn--small">تم الحشن </a>
+            <a href="#" class="c-btn c-btn--small">تواصل</a>
+            <a href="#" class="c-btn c-btn--destructive c-btn--small">حذف الطلب</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+</div>
+
+{{/layout}}

@@ -1,0 +1,65 @@
+{{#> layout title="اضافة مستخدم" pageScript="/src/scripts/upload.js"}}
+
+<div class="single-page">
+    <header class="page-header">
+        <h1 class="page-title">اضافة مستخدم</h1>
+        <button class="c-btn c-btn--primary" type="submit" name="submit" form="add-user"> مستخدم جديد</button>
+    </header>
+    <form action="" class="c-form" name="add-product">
+
+        <div class="c-upload c-upload--small js-upload">
+            <header class="c-upload__header">
+                <h4 class="c-upload_title">صورة المستخدم</h4>
+            </header>
+            <div class="c-upload__body">
+                <label for="upload-image-small" class="c-upload__label">ارفع الصورة</label>
+
+                <img src="#" alt="" class="js-upload-placeholder">
+
+                <input type="file" name="upload-image-small" class="c-upload__field js-upload-value" accept="image/*">
+            </div>
+            <span class="c-upload__label c-upload__label--remove js-upload-remove">احذف الصورة</span>
+
+        </div>
+        <div class="c-form__controls">
+            <div class="c-form__row">
+                <div class="c-textfield">
+                    <label for="user-name" class="c-textfield__label"> اسم المستخدم </label>
+                    <input type="text" class="c-textfield__input" id="user-name" required>
+                </div>
+            </div>
+            <div class="c-form__row">
+                <div class="c-textfield">
+                    <label for="email" class="c-textfield__label">البريد الالكتروني</label>
+                    <input type="email" class="c-textfield__input" id="email" required>
+
+                </div>
+                <div class="c-textfield">
+                    <label for="email-confirm" class="c-textfield__label">تاكيد البريد الالكتروني</label>
+                    <input type="email" class="c-textfield__input " id="email-confirm" required>
+
+                </div>
+            </div>
+
+            <div class="c-form__row">
+                <div class="c-textfield">
+                    <label for="password" class="c-textfield__label">كلمة المرور</label>
+                    <input type="password" class="c-textfield__input" id="password" required>
+                </div>
+            </div>
+            <div class="c-form__row">
+                <div class="c-textfield">
+                    <label for="password-confirm" class="c-textfield__label">تاكيد كلمة المرور </label>
+                    <input type="password" class="c-textfield__input" id="password-confirm" required>
+                </div>
+            </div>
+
+
+
+        </div>
+
+    </form>
+</div>
+
+
+{{/layout}}

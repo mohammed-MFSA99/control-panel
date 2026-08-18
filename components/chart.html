@@ -36,47 +36,55 @@
 </div>
 
 <script type="module">
+    // 1. استيراد مكتبة Chart.js مع حزمة المكونات التلقائية
     import Chart from 'chart.js/auto';
+
+    // 2. الحصول على عنصر Canvas المخصص لرسم المخطط البياني
     const ctx = document.getElementById('example-chart');
 
+    // 3. إنشاء كائن الرسم البياني وتحديد الإعدادات والبيانات
     const chart = new Chart(ctx, {
-        type: 'line',
+        type: 'line', // نوع الرسم البياني: خطي
         data: {
+            // التسميات التوضيحية للمحور السيني (أشهر السنة)
             labels: ['يناير', 'فبراير', 'مارس', 'ابريل', 'ماي', 'يونيو', 'يوليو', 'اغسطس', 'سبتمبر', 'اكتوبر', 'نوفمبر', 'ديسمبر'],
             datasets: [{
                 label: 'مبيعات الشهر',
-                data: [432, 533, 1200, 644, 362, 1240, 1630, 235, 422, 543, 123, 333],
-                borderColor: '#2541b2',
-                backgroundColor: 'transparent',
-                lineTension: 0.2,
+                data: [432, 533, 1200, 644, 362, 1240, 1630, 235, 422, 543, 123, 333], // قيم المبيعات
+                borderColor: '#2541b2',     // لون خط الرسم البياني
+                backgroundColor: 'transparent', // خلفية شفافة تحت الخط
+                lineTension: 0.2,           // نسبة انحناء الخط (نعومة المنحنى)
             }]
         },
         options: {
             plugins: {
                 legend: {
-                    display: false,
+                    display: false, // إخفاء مربع دلالة الألوان (Legend)
                 }
             },
             scales: {
                 y: {
-                    display: false
+                    display: false // إخفاء المحور الرأسي (Y)
                 },
                 x: {
-                    position: 'top'
+                    position: 'top' // نقل المحور الأفقي (X) لأعلى الرسم البياني
                 }
             }
         }
     });
 
+    // 4. تحديد عنصر التنقل/الزر من الـ DOM
     const navigation = document.querySelector('.c-table__navigation');
+
+    // 5. دالة مساعدة لتوليد مصفوفة أرقام عشوائية عينة لتحديث البيانات
     const randomArray = (myLenght, max) => Array.from({ length: myLenght }, () => Math.round(Math.random() * max));
 
+    // 6. الاستماع لحدث النقر لتحديث بيانات الرسم البياني وإعادة رسمه
     navigation.addEventListener('click', () => {
-
-        chart.data.datasets[0].data = randomArray(12, 1200);
-        chart.update();
-
-    })
+        chart.data.datasets[0].data = randomArray(12, 1200); // إسناد البيانات العشوائية الجديدة
+        chart.update(); // إعادة تفعيل ورسم المخطط بالبيانات الجديدة
+    });
 </script>
+
 
 {{/component-container}}

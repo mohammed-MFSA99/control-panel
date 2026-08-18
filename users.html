@@ -1,0 +1,54 @@
+{{#> layout title="المستخدمين"}}
+
+<div class="single-page">
+    <header class="page-header">
+        <h1 class="page-title">المستخدمين</h1>
+        <a href="/add-user.html" class="c-btn" type="submit" name="draft">اضافة مستخدم </a>
+    </header>
+
+    <div class="c-table">
+
+        {{#> table-header title="المستخدمين" caption="6 من اصل 24"}}
+        <button class="c-btn c-btn--destructive c-btn--slim">حذف</button>
+        {{/table-header}}
+
+        <table class="c-table__data c-table--select-all">
+            <thead>
+                <tr>
+                    {{> select-all}}
+                    <th>اسم المستخدم</th>
+                    <th>البريد الالكتروني </th>
+                    <th>عدد المنتجات </th>
+                    <th>المبيعات</th>
+                    <th>الرصيد</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="checkbox" id="itme-1"></td>
+                    <td><img src="/public/images/user-1.jpg"></td>
+                    <td>محمد احمد</td>
+                    <td>mehd@gmail.com</td>
+                    <td>12</td>
+                    <td>800$</td>
+                    <td>200%</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" id="itme-1"></td>
+                    <td><img src="/public/images/user-2.jpg"></td>
+                    <td> علي صلاح</td>
+                    <td>ali@gmail.com</td>
+                    <td>15</td>
+                    <td>500$</td>
+                    <td>700%</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <footer class="c-table__footer">
+            {{> table-navigation caption="6 من اصل 24"}}
+        </footer>
+    </div>
+</div>
+
+{{/layout}}

@@ -1,0 +1,61 @@
+{{#> layout title="المنتجات" }}
+
+<div class="single-page">
+    <header class="page-header">
+        <h1 class="page-title">الطلبات</h1>
+    </header>
+
+    <div class="c-table">
+
+        {{#> table-header title="المنتجات" caption="6 من اصل 24"}}
+        <button class="c-btn c-btn--primary c-btn--slim">تم الشحن</button>
+        <button class="c-btn  c-btn--slim">تتم المعالجة</button>
+        <button class="c-btn c-btn--destructive c-btn--slim">حذف</button>
+        {{/table-header}}
+
+
+        <table class="c-table__data c-table--select-all">
+            <thead>
+                <tr>
+                    {{> select-all}}
+                    <th>المنتج</th>
+                    <th> المشتري</th>
+                    <th>بلد الشحن </th>
+                    <th>القيمة</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="c-list c-list--table-row">
+                    <td>
+                        <input type="checkbox" id="item-1">
+                    </td>
+                    <td>
+                        <img src="/images/black-shirt.jpg" class="c-list__media">
+                    </td>
+                    <td class="c-list__data"> قيص اسود M</td>
+                    <td class="c-list__data">علي صلاح</td>
+                    <td class="c-list__data">اليمن-حضرموت</td>
+                    <td class="c-list__data">20.00$</td>
+
+                    <td>
+                        <div class="c-list__actions">
+                            <a href="#" class="c-btn c-btn--primary c-btn--small">تم الحشن </a>
+                            <a href="#" class="c-btn c-btn--small">تواصل</a>
+                            <a href="#" class="c-btn c-btn--destructive c-btn--small">حذف الطلب</a>
+                        </div>
+                    </td>
+
+
+                </tr>
+            </tbody>
+        </table>
+
+        <footer class="c-table__footer">
+            {{> table-navigation caption="6 من اصل 24"}}
+        </footer>
+    </div>
+
+</div>
+
+{{/layout}}
