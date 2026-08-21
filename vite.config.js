@@ -8,7 +8,20 @@ export default defineConfig({
         handlebars({
             partialDirectory: './src/partials',
         })
-    ]
+    ],
+    build: {
+        rollupOptions: {
+            input: {
+                main: `/index.html`,
+                products: `/products.html`,
+                users: `/users.html`,
+                orders: `/orders.html`,
+                addProduct: `/add-product.html`,
+                addUser: `/add-user.html`
+
+            }
+        }
+    }
 })
 
 

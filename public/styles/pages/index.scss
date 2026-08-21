@@ -1,5 +1,6 @@
 @use "../config/layout.scss" as layout;
 @use "../utilites/spacing.scss" as spaces;
+@use "../components/sidebar.scss" as sidebar;
 
 
 .page-container {
@@ -22,4 +23,20 @@
 
 .welcome-tag {
     font-size: 28px;
+}
+
+
+@media(max-width: layout.$bp-sidebar) {
+    .page-container {
+        padding-right: sidebar.$dense-width + spaces.spacing("small");
+    }
+
+    .home-intro {
+        margin: spaces.spacing('normal') 0 spaces.spacing('wide');
+    }
+
+    .welcome-tag {
+        font-size: 24px;
+    }
+
 }

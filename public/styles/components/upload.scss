@@ -3,10 +3,12 @@
 @use "../config/colors.scss" as colors;
 
 
+$upload-size: 400px;
+
 .c-upload {
     @include mixin-card.e-card;
-    min-width: 400px;
-    min-height: 400px;
+    min-width: $upload-size;
+    min-height: $upload-size;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -102,5 +104,13 @@
         img {
             display: block;
         }
+    }
+}
+
+
+@media (max-width: $upload-size) {
+    .c-upload {
+        min-width: initial;
+        width: 100%;
     }
 }

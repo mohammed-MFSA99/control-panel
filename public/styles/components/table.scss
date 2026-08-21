@@ -10,6 +10,7 @@
 
 
 $product-media-size: 40px;
+$bp-table-column: 660px;
 
 .c-table {
     @include mixin-card.e-card;
@@ -19,6 +20,7 @@ $product-media-size: 40px;
 
 .c-table__header {
     display: flex;
+    flex-wrap: wrap;
     align-items: baseline;
     margin-bottom: spaces.spacing('small');
     padding: 0 spaces.spacing('normal');
@@ -87,4 +89,117 @@ $product-media-size: 40px;
             width: 75px;
         }
     }
+}
+
+
+.c-table--select-all th:first-child input+label {
+    display: none;
+}
+
+@media (max-width: $bp-table-column) {
+    .c-table__data {
+        display: flex;
+        overflow-x: auto;
+
+        tbody,
+        thead {
+            display: flex;
+            flex-grow: 1;
+            min-width: max-content;
+        }
+
+        tr {
+            display: flex;
+            flex-grow: 1;
+            flex-shrink: 0;
+            flex-direction: column;
+        }
+
+        td,
+        th {
+            padding: spaces.spacing("extra-small") spaces.spacing();
+        }
+    }
+
+    .c-table--select-all th:first-child input+label {
+        display: inline;
+    }
+
+    .c-table--select-all th:nth-child(2) label {
+        display: none;
+    }
+
+    .c-table--select-all {
+
+        th,
+        td {
+            &:first-child {
+                display: flex;
+                align-items: center;
+                padding-right: spaces.spacing();
+                width: initial;
+
+                input {
+                    margin-left: spaces.spacing('extra-small');
+                }
+            }
+        }
+    }
+
+    .c-table--select-all td:first-child {
+        height: math.floor(13px * vars.$line-height) + 2px;
+        box-sizing: content-box;
+    }
+
+    .c-table--select-all th:nth-child(2) {
+        height: $product-media-size + 1px;
+        box-sizing: content-box;
+    }
+
+    .c-table--select-all th:nth-child(3),
+    .c-table--select-all th:nth-child(1) {
+        order: -1;
+    }
+
+    .c-table--select-all th:nth-child(3),
+    .c-table--select-all td:nth-child(2) {
+        border-bottom: transparent;
+    }
+
+    .c-list--table-row {
+        width: initial;
+        align-items: flex-start;
+        padding: 0;
+
+        .c-list__data:not(:first-of-type) {
+            margin-right: 0;
+            margin-left: 0;
+            border-top: 0;
+        }
+
+        .c-list__actions {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            border-top: 0;
+
+            .c-btn {
+                margin-bottom: spaces.spacing('small');
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+            }
+        }
+
+        th,
+        td {
+            width: 100% !important;
+        }
+    }
+
+
+
+
 }
