@@ -114,7 +114,8 @@
 
 ---
 
-## 👤 المطور (Author)
-* الاسم: **[Mohammed Faez]**
-* حساب GitHub: `@[https://github.com/mohammed-MFSA99]`
-* LinkedIn: `[رابط حسابك]`
+**Mohammed Faez**  
+Frontend Web Developer
+
+- GitHub: [your-github](https://github.com/mohammed-MFSA99)
+
