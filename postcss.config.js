@@ -1,5 +1,3 @@
-import { plugins } from "chart.js";
-
 export default {
     plugins: {
         'postcss-preset-env': {
