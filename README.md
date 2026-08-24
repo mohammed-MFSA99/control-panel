@@ -7,7 +7,7 @@
 
 ### Desktop
 
-![Desktop Screenshot](screenshots/desktop-home.png)
+![Desktop Screenshot](./screenshots/desktop-home.png)
 
 
 ## 🚀 التقنيات المستخدمة (Tech Stack)
