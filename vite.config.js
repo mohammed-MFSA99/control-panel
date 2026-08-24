@@ -4,6 +4,8 @@ import handlebars from "vite-plugin-handlebars";
 
 export default defineConfig({
 
+    base: '/control-panel/',
+
     plugins: [
         handlebars({
             partialDirectory: './src/partials',
