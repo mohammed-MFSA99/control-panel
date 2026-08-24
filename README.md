@@ -9,7 +9,8 @@
 * **Build Tool & Bundler:** [Vite](https://vitejs.dev/) - لتجربة تطوير سريعة وتجميع أمثل للملفات (Rollup Multi-Page Setup).
 * **HTML Templating:** [Handlebars (vite-plugin-handlebars)](https://handlebarsjs.com/) - لتقسيم الواجهة إلى مكونات وقوالب قابلة لإعادة الاستخدام (Partials & Layouts).
 * **Styles / CSS:**
-  * **معمارية ITCSS (Inverted Triangle CSS):** تنظيم تدرج الخصوصية (Specificity) وتقسيم الشيفرة إلى طبقات معيارية (`config`, `base`, `components`, `pages`, `utilities`, `hacks`).
+* 
+  * ITCSS (Inverted Triangle CSS):** تنظيم تدرج الخصوصية (Specificity) وتقسيم الشيفرة إلى طبقات معيارية (`config`, `base`, `components`, `pages`, `utilities`, `hacks`).
   * [Sass (SCSS)](https://sass-lang.com/) لكتابة تنسيقات متقدمة ومتجاوبة مع نمط تسمية منظم (BEM-like).
   * [PostCSS Preset Env](https://preset-env.cssdb.org/) لتحويل خصائص الـ CSS الحديثة وضمان التوافق مع مختلف المتصفحات (Stage 2 & Autoprefixer).
   * [Normalize.css](https://necolas.github.io/normalize.css/) لتوحيد الأنماط الافتراضية عبر المتصفحات.
