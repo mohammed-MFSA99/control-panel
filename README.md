@@ -115,6 +115,6 @@
 ---
 
 ## 👤 المطور (Author)
-* الاسم: **[اكتب اسمك هنا]**
-* حساب GitHub: `@[حسابك]`
+* الاسم: **[Mohammed Faez]**
+* حساب GitHub: `@[https://github.com/mohammed-MFSA99]`
 * LinkedIn: `[رابط حسابك]`
