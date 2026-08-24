@@ -3,6 +3,12 @@
 لوحة تحكم إدارية متعددة الصفحات (Multi-Page Application) مبنية باستخدام **Vite** و **Handlebars** و **SCSS** و **Vanilla JavaScript**. تم تصميمها باللغة العربية (RTL) بهيكل منظم واحترافي يعتمد على معمارية **ITCSS** وإعادة استخدام المكونات.
 
 ---
+## 📸 Screenshots
+
+### Desktop
+
+![Desktop Screenshot](screenshots/desktop-home.png)
+
 
 ## 🚀 التقنيات المستخدمة (Tech Stack)
 
