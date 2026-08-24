@@ -6,7 +6,7 @@
 
 ## 🚀 Live Demo
 
-[View Live Demo]([your-live-demo-url](https://mohammed-mfsa99.github.io/control-panel/))
+[View Live Demo](https://mohammed-mfsa99.github.io/control-panel/)
 
 
 ## 📸 Screenshots
