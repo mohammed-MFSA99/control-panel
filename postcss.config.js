@@ -1,5 +1,7 @@
+import { plugins } from "chart.js";
+
 export default {
-    Plugin: {
+    plugins: {
         'postcss-preset-env': {
             stage: 2
         },
