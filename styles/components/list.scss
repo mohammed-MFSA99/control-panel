@@ -1,0 +1,85 @@
+@use "../utilites/spacing.scss" as spaces;
+@use "../config/layout.scss" as layout;
+
+
+
+$container-horizontal-spacing: spaces.spacing('extra-small');
+
+.c-list {
+
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background: #fff;
+    padding: spaces.spacing("extra-small") $container-horizontal-spacing;
+
+    box-shadow: 0 0 0 1px rgb(black, 0.05);
+
+}
+
+.c-list__media {
+    height: 60px;
+    margin-left: spaces.spacing("small");
+    width: auto;
+}
+
+.c-list__data {
+    flex-grow: 1;
+    margin-left: spaces.spacing("small");
+}
+
+.c-list__actions {
+    margin-right: 0;
+    margin-left: spaces.spacing("small");
+    text-align: left;
+    opacity: 0;
+    transition: all 200ms ease;
+}
+
+.c-list:hover .c-list__actions {
+    opacity: 1;
+}
+
+.c-list--table-row {
+    display: table-row;
+}
+
+@media (max-width: layout.$bp-tablet-small) {
+    .c-list {
+        flex-wrap: wrap;
+    }
+
+    .c-list__actions {
+        opacity: 1;
+        text-align: right;
+    }
+
+    .c-list__data:not(:first-of-type),
+    .c-list__actions {
+        width: 100%;
+        padding-top: spaces.spacing('extra-small');
+        padding-bottom: spaces.spacing('extra-small');
+        border-top: 1px solid #f8f8f8;
+        margin-right: - $container-horizontal-spacing;
+        margin-left: - $container-horizontal-spacing;
+        padding-right: $container-horizontal-spacing;
+        padding-left: $container-horizontal-spacing;
+    }
+
+    .c-list__actions {
+        opacity: 1;
+        text-align: right;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        border-top: 0;
+
+        .c-btn {
+            margin-bottom: spaces.spacing('small');
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

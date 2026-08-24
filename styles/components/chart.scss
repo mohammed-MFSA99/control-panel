@@ -1,0 +1,26 @@
+@use "../utilites/mixin-card.scss" as mixin-card;
+@use "../utilites/spacing.scss" as spaces;
+@use "../config/colors.scss" as colors;
+
+.c-chart {
+    @include mixin-card.e-card;
+    width: 100%;
+    padding-top: spaces.spacing('normal');
+}
+
+.c-chart__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 spaces.spacing('normal');
+    flex-wrap: wrap;
+    margin-bottom: spaces.spacing('normal');
+}
+
+.c-chart__header__title {
+    margin-left: auto;
+}
+
+.c-chart__data {
+    font-size: 12px;
+}

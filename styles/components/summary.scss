@@ -1,0 +1,52 @@
+@use "../utilites/mixin-card.scss" as mixin-card;
+@use "../utilites/spacing.scss" as spaces;
+@use "../config/colors.scss" as colors;
+@use "../base/font.scss" as fonts;
+
+.c-summary {
+    @include mixin-card.e-card;
+    display: inline-flex;
+    align-items: center;
+    padding: spaces.spacing("small") spaces.spacing("wide");
+    flex-wrap: wrap;
+}
+
+.c-summary__data {
+    display: flex;
+    flex-direction: column;
+    margin-left: spaces.spacing('normal');
+    text-align: center;
+
+    &:last-child {
+        margin-left: spaces.spacing('none');
+    }
+}
+
+.c-summary__value {
+    font-family: fonts.$family-heading;
+    font-size: 28px;
+    font-weight: bold;
+
+    &--positive {
+        color: colors.$color-blue;
+    }
+
+    &--negative {
+        color: colors.$color-red;
+    }
+}
+
+.c-summary--boxless {
+    background: none;
+    box-shadow: none;
+    margin-bottom: 0;
+}
+
+.c-summary--small {
+
+    .c-summary__key,
+    .c-summary__value {
+        font-size: 13px;
+        font-weight: normal;
+    }
+}

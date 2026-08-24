@@ -1,0 +1,24 @@
+@use "../config/variables.scss" as var;
+@use "../config/colors.scss" as colors;
+@use "../base/font.scss" as font;
+
+
+
+html {
+    box-sizing: border-box;
+    direction: rtl;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: var.$font-base;
+    line-height: var.$line-height;
+    color: colors.$color-content;
+    background-color: colors.$color-background;
+    font-family: font.$family-content;
+}
