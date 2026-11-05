@@ -38,8 +38,7 @@ The main goals of this project were to:
 ---
 
 ### 🚀 Live Demo
-[View Live Demo](https://username.github.io/control-panel/)  
-*(Replace with your deployed GitHub Pages URL)*
+[View Live Demo](https://mohammed-mfsa99.github.io/control-panel/)
 
 ---
 
@@ -251,11 +250,11 @@ Planned enhancements for future iterations:
 ---
 
 ### 👨‍💻 Author
-**Your Name**  
+**Mohammed Faez**  
 *Frontend Web Developer*  
-* GitHub: [@username](https://github.com/username)  
-* LinkedIn: [Your Profile](https://linkedin.com/in/username)  
-* Portfolio: [your-portfolio.com](https://your-portfolio.com/)
+* GitHub: [@mohammed-MFSA99](https://github.com/mohammed-MFSA99)  
+* LinkedIn: [Mohammed Faez](https://linkedin.com/)  
+* Portfolio: [mohammed-mfsa99.github.io](https://mohammed-mfsa99.github.io/)
 
 ---
 
@@ -294,8 +293,7 @@ This project is open-source and licensed under the [MIT License](LICENSE).
 ---
 
 ### 🚀 المعاينة المباشرة (Live Demo)
-[مشاهدة المعاينة المباشرة](https://username.github.io/control-panel/)  
-*(يمكنك استبدال الرابط برابط مشروعك على GitHub Pages)*
+[مشاهدة المعاينة المباشرة](https://mohammed-mfsa99.github.io/control-panel/)
 
 ---
 
@@ -506,11 +504,11 @@ control-panel-vite/
 ---
 
 ### 👨‍💻 المطور
-**اسمك الكريم**  
+**محمد فايز (Mohammed Faez)**  
 *مطور واجهات أمامية (Frontend Web Developer)*  
-* GitHub: [@حسابك](https://github.com/username)  
-* LinkedIn: [حسابك على لينكد إن](https://linkedin.com/in/username)  
-* الموقع الشخصي: [your-portfolio.com](https://your-portfolio.com/)
+* GitHub: [@mohammed-MFSA99](https://github.com/mohammed-MFSA99)  
+* LinkedIn: [Mohammed Faez](https://linkedin.com/)  
+* الموقع الشخصي: [mohammed-mfsa99.github.io](https://mohammed-mfsa99.github.io/)
 
 ---
 
